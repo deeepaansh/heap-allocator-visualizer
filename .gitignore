@@ -1,0 +1,6 @@
+*.o
+demo
+test_1024
+test_1024.c
+.DS_Store
+PROJECT_EXPLANATION.md

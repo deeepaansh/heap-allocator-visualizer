@@ -1,10 +1,16 @@
-clang-test:
-	clang -O3 llist.c heap.c main.c -o heap_test
-	./heap_test	
+CC     = clang
+CFLAGS = -Wall -Wno-deprecated-declarations -Wno-int-conversion
 
-gcc-test:
-	gcc -O3 llist.c heap.c main.c -o heap_test
-	./heap_test
+TARGET = demo
+
+SRCS = heap.c llist.c visualizer.c main.c
+OBJS = $(SRCS:.c=.o)
+
+$(TARGET): $(OBJS)
+	$(CC) $(CFLAGS) -o $(TARGET) $(OBJS)
+
+%.o: %.c
+	$(CC) $(CFLAGS) -c $< -o $@
 
 clean:
-	rm heap_test
+	rm -f $(OBJS) $(TARGET)
