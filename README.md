@@ -1,6 +1,6 @@
 # 🛠️ Heap Allocator Visualizer
 
-An interactive C program that wraps around the CCareaga dynamic memory allocator and visualizes heap allocation, external fragmentation, best-fit block selection, and neighbor coalescing in the terminal using ANSI colors.
+An interactive C program that wraps around a dynamic memory allocator and visualizes heap allocation, external fragmentation, best-fit block selection, and neighbor coalescing in the terminal using ANSI colors.
 
 ---
 
@@ -66,7 +66,7 @@ Command>
 
 1. **Clone the repository:**
    ```bash
-   git clone https://github.com/YOUR_USERNAME/heap-allocator-visualizer.git
+   git clone https://github.com/deeepaansh/heap-allocator-visualizer
    cd heap-allocator-visualizer
    ```
 
@@ -104,8 +104,3 @@ Command>
 - **Segregated Bins**: Free blocks are indexed into 9 size-classed doubly-linked list bins.
 - **Zero-Dependency Core**: Managed heap resides in a static buffer without touching stdlib system `malloc`/`free`.
 
----
-
-## 📄 License
-
-This project incorporates the core allocator implementation by [CCareaga](https://github.com/CCareaga/heap_allocator) under MIT License. Visualizer and interactive interface additions licensed under MIT.
